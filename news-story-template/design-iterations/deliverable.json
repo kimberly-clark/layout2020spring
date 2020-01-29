@@ -1,0 +1,12 @@
+{
+    "entrypoints": [
+        {
+            "name": "time",
+            "file": "time.html"
+        },
+        {
+            "name": "color",
+            "file": "color.html"
+        }
+    ]
+}
