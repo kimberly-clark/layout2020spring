@@ -7,6 +7,10 @@
         {
             "name": "color",
             "file": "color.html"
+        },
+        {
+            "name": "black and white",
+            "file": "black-and-white.html"
         }
     ]
 }
