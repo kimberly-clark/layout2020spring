@@ -1,1 +1,16 @@
-
+{
+    "entrypoints": [
+        {
+            "name": "grid",
+            "file": "index1.html"
+        },
+        {
+            "name": "line",
+            "file": "index2.html"
+        },
+        {
+            "name": "scroll",
+            "file": "index3.html"
+        }
+    ]
+}
