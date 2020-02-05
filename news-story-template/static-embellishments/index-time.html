@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>News Story Template</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style>[v-cloak] { display: none; }</style>
+    <link rel="stylesheet" type="text/css" href="time-style.css">
 
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://use.typekit.net/yde1ngx.css">
+
+
+  </head>
+  <body>
+    <div id="news-template" v-cloak>
+       <!--Header -->
+      <header class="component header">
+        <div class="header-safe-area header-flex">
+          <div class="box first-box">
+          <button class="menu">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+          </button>
+        </div>
+
+          <h4 class="header time box">TIME</h4>
+          <h2 class="header subscribe box last-box">SUBSCRIBE</h2>
+        </div>
+      </header>
+
+
+      <!-- Main Story -->
+     
+      <section class="component title-section">
+       <!-- Safe area with titles -->
+        <div class="title-safe-area">
+          <h2 class="story-tags"><span v-for="tag in story.tags">{{ tag }}</span></h2>
+
+          <h1 class="title">{{ story.title }}</h1>
+        <h2 class="subtitle">{{ story.subtitle }}</h2>
+        </div>
+        <!-- Image -->
+        <figure><img class="title-picture" v-bind:src="story.image.url">
+        <h3><figcaption class="title-picture-caption">{{ story.image.caption }}</figcaption></h3>
+        </figure>
+
+        <div class="source-and-date">
+        <h2 class="center">By <a v-bind:href="story.source.url" class="story-source">{{ story.source.name }}</a>{{ story.date }}</h2>
+      </div>
+
+     
+    </section>  
+
+    <!--<section class="component side-related-story-contianer">
+      <h2 class="most-popular-stories">MOST POPULAR STORIES</h2>
+    </section>-->
+
+      
+      <!--Section, main story-->
+      <section class="component story-content">
+        <div class="safe-area">
+      <p class="drop-cap"><span v-html="story.teaser" class="story-teaser"></span></p>
+      <p><span v-html="story.content" ></span></p>
+
+      
+    </div>  
+    </section>
+
+    <section class="component end-time">
+      <div class="safe-area">
+
+        <h2>Contact <a v-bind:href="story.source.url" class="story-source">{{ story.source.name }}</a></h2>
+        <h4 class="time">TIME</h4>
+        <div class="circles">
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+      </div>
+      </div>
+      
+    </section>
+
+
+      <!-- Related Stories, footer-->
+      <footer class="component">
+        <div class="safe-area">
+          <hr class="before-footer-line">
+      <h1 class="read-more">READ MORE FROM TIME</h1>
+      <ul class="related-story-container">
+        <li v-for="relatedStory in relatedStories" class="related-story-list-object">
+          <div v-on:click="load(relatedStory)" class="related-story-div">
+            <img class="related-story-image" v-bind:src="relatedStory.image.url">
+            <h2 class="related-story-tags"><span v-for="tag in story.tags">{{ tag }}</span></h2>
+            <h2 class="related-story-title">{{ relatedStory.title }}</h2>
+          </div>
+          <hr>
+        </li>
+      </ul>
+    </div>
+  </footer>
+       
+
+       
+      <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+      <!--
+      <pre>The story object: {{ story | json }}</pre>
+      <pre>The relatedStories array: {{ relatedStories | json }}</pre>
+      -->
+   
+
+    </div>
+
+    <!-- Scripts here are what load the Vue library, and the actual story content. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+  </body>
+</html>
