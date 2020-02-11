@@ -1,0 +1,288 @@
+body{
+    margin: 0;
+ }
+  
+ /*Header */
+ header{
+     padding-top: 10px;
+     padding-bottom: 10px;
+     box-shadow: 0 2px 6px -2px lightgrey;
+     width: 100%;
+     position: fixed;
+     background-color: white;
+     height: 30px;
+ }
+ 
+ .header-safe-area{
+     max-width: 97%;
+     margin: auto;
+     height: 32px;
+ }
+ 
+ .header-flex{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: baseline;
+ }
+ @media (min-width: 1025px){
+     display: inline-block;
+ }
+ 
+ 
+ .box{
+     flex: 1;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .first-box {
+     justify-content: flex-start;
+ }
+ 
+ .last-box {
+     justify-content: flex-end;
+ }
+ 
+ 
+ .menu-bar {
+     width: 20px;
+     height: 1px;
+     background-color: black;
+     margin: 4px 0;
+   }
+ 
+   .time{
+       color: red;
+       font-size: 25px;
+       margin: 0;
+   }
+ 
+   .subscribe{
+       font-size: 12px;
+       margin: 0;
+   }
+  
+ 
+ 
+ /* Components */
+ .title-safe-area{
+     margin: auto;
+     max-width: 80%;
+ }
+ 
+ .safe-area{
+     margin: auto;
+     max-width: 95%
+     
+ }
+ 
+ @media (min-width: 750px){
+ .safe-area{
+     /* the width will be the smaler of these two thing (84% until we get to 675px) */
+     max-width: 78%;
+     width: 675px;
+ }
+ }
+ 
+ @media (min-width: 1025px){
+     .safe-area{
+         width: 575px;
+         /*margin-left: 8%*/
+         
+     }
+ }
+ 
+ .title-section{
+     text-align: center;
+     padding-top: 25px;
+ }
+ 
+ .story-tags{
+     color: red;
+     font-size: 15px;
+     position: relative;
+     top: 30px;
+     z-index: -1;
+     height: 25px;
+ }
+ 
+ .title{
+     font-size: 30px;
+ }
+ 
+ @media (min-width: 1025px){
+     .title{
+         font-size: 38px;
+     }
+ }
+ 
+ .subtitle{
+     color: gray;
+     font-size: 20px;
+ }
+ 
+ @media (min-width: 1025px){
+     .subtitle{
+         font-size: 25px;
+     }
+ }
+ 
+ figure{
+     margin: 0;
+ }
+ 
+ .title-picture{
+     width:100%;
+ }
+ 
+ @media (min-width: 700px){
+     .title-picture{
+         width: 700px;
+         margin: auto;
+     }
+ }
+ 
+ @media (min-width: 1025px){
+     .title-picture{
+         /*float: left;
+         margin-left: 8%;*/
+     }
+ }
+
+ .title-picture-caption{
+     z-index: 5;
+     background-color: blue;
+ }
+ 
+ .source-and-date{
+     color: gray;
+     font-size: 15px;
+     margin: auto;
+     text-align: center;
+ }
+
+
+ 
+ .source-and-date > * {
+     display: inline-block;
+     font-size: 15px;
+ }
+ 
+ 
+ .story-source{
+     color: red;
+     font-weight: bold;
+     text-decoration: none;
+     margin-left: 4px;
+     margin-right: 18px;
+ }
+ 
+.side-related-story-container{
+    display: none;
+}
+@media (min-width: 1000px){
+    .side-related-story-container{
+        display: block;
+    }
+}
+
+
+ .story-content{
+     clear: both;
+ }
+ 
+ .drop-cap:first-letter{
+     font-size: 4.5em;
+     float: left;
+     margin-top: .15em;
+     border-left: 3px;
+     border-top: 3px;
+     border-color: red;
+ }
+ 
+ p{
+     font-size: 20px;
+     line-height: 1.4em;
+ }
+ 
+ a{
+     color: red;
+     text-decoration: none;
+ }
+ 
+ .end-time{
+     text-align: center;
+ }
+ 
+ .circles{
+     padding-top: 25px;
+ }
+ 
+ .circle{
+     height: 25px;
+     width: 25px;
+     border: 2px solid red;
+     border-radius: 50%;
+     display: inline-block;
+ }
+ 
+ /* Footer */
+ .before-footer-line{
+     margin-bottom: 60px;
+ }
+ 
+ footer{
+     padding-top: 30px;
+ }
+ 
+ .read-more{
+     font-size: 16px;
+ }
+ 
+ 
+ .related-story-container{
+     display: flex;
+     flex-direction: column;
+     padding: 0;
+ }
+ 
+ .related-story-list-object{
+     list-style-type: none;
+ }
+
+ .related-story-list-object::before{
+     content: "test";
+     display: block;
+     text-align: center;
+ }
+ 
+ .related-story-div{
+     position: relative;
+     height: 75px;
+     overflow: hidden;
+     padding-top: 10px;
+     padding-bottom: 25px;
+ }
+ 
+ .related-story-tags{
+     color: red;
+     font-size: 15px;
+     position: relative;
+     margin: 0;
+ }
+ 
+ .related-story-title{
+     font-size: 16px;
+     position: relative;
+     margin: 0;
+     margin-top: 10px;
+ }
+ 
+ .related-story-image{
+     width: 125px;
+     height:75px;
+     background-size: cover;
+     float: left;
+     padding-right: 15px;
+ }
