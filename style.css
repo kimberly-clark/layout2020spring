@@ -1,0 +1,7 @@
+img {
+    /* the width will be the smaler of these two thing (84% until we get to 675px) */
+    max-width: 78%;
+    width: 900px;
+    display: block;
+    margin-left: 5%;
+}
