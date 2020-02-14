@@ -1,0 +1,15 @@
+.small-nav-item{
+    list-style: none;
+    text-align: center;
+    height: 50px;
+    background-color: lightgray;
+    margin: 5px;
+    padding-top: 10px;
+
+}
+
+.primary-option{
+    color: red;
+    text-decoration:none;
+    font-size: 35px;
+}
