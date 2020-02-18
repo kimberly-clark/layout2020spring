@@ -1,0 +1,121 @@
+.masthead{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.masthead-left{
+    flex-grow: 1;
+    padding: 40px 0 0 4%;
+}
+.masthead-center{
+    flex-grow: 3;
+    text-align: center;
+}
+.masthead-right{
+    flex-grow: 1;
+    text-align: right;
+    padding: 40px 4% 0 0;
+}
+
+.menu-image{
+    height: 40px;
+}
+
+.account-image{
+    height: 40px;
+}
+ 
+.news-time{
+    font-family: blenny, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 65px;
+    padding: 0;
+    margin: 0;
+    height: 80px;
+
+
+}
+
+.tagline{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    font-size: 35px;
+
+}
+
+.nav-ul{
+    padding-left: 0;
+}
+
+.nav-item{
+    list-style: none;
+}
+
+.p1{
+    background-color: black;
+}
+
+.p2{
+    background-color: #ea3323;
+}
+
+.p3{
+    background-color: #80b6bc;
+}
+
+.p4{
+    background-color: #808080;
+}
+
+.primary{
+    padding: 10px 0;
+}
+
+.nav-text{
+    text-decoration:none;
+    font-size: 35px;
+    color: white;
+}
+
+.primary-text{
+    padding-left: 10%;
+    font-size: 50px;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('AvenirLTStd-Book.woff2') format('woff2'),
+        url('AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.secondary-text{
+    font-family: 'Avenir LT Std';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    padding-left: 20%;
+}
+
+
+.main-nav{
+    Visibility: hidden;
+    Opacity: 0;
+    Transition: opacity, 0.3s, visibility 0.3s, transform 0.3s;
+    Transform: translatetrX(20px)
+    }
+    
+    .main-nav.nav-is-open{
+    Opacity: 1;
+    Visibility: visible;
+    Transform: translateX(0);
+    }
+    
