@@ -91,8 +91,8 @@
 
 @font-face {
     font-family: 'Avenir LT Std';
-    src: url('AvenirLTStd-Book.woff2') format('woff2'),
-        url('AvenirLTStd-Book.woff') format('woff');
+    src: url('fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('fonts/AvenirLTStd-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -101,21 +101,29 @@
     font-family: 'Avenir LT Std';
     font-weight: normal;
     font-style: normal;
-    font-size: 30px;
+    font-size: 50px;
     padding-left: 20%;
 }
 
 
-.main-nav{
+.menu-container{
     Visibility: hidden;
     Opacity: 0;
     Transition: opacity, 0.3s, visibility 0.3s, transform 0.3s;
     Transform: translatetrX(20px)
     }
     
-    .main-nav.nav-is-open{
+    .menu-container.menu-is-open{
     Opacity: 1;
     Visibility: visible;
     Transform: translateX(0);
     }
     
+
+    .expandable > ul{
+        display: none;
+    }
+
+    .expandable.expanded > ul{
+        display: block;
+    }

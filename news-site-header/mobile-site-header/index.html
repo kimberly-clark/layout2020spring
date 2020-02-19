@@ -8,10 +8,10 @@
         <link rel="stylesheet" href="https://use.typekit.net/yde1ngx.css">
     </head>
     <body>
-        <header>
+        <header id="news-site-header">
             <div class="masthead"><!--Title and tagline-->
                 <div class="masthead-left">
-                    <img class="menu-image" src="menu.png">
+                    <button v-on:click="toggleTheHamburgerMenu()"><img class="menu-image" src="menu.png"></button>
                 </div>
                 <div class="masthead-center">
                     <h1 class="news-time">News Time</h1>
@@ -24,11 +24,10 @@
             </div>
             
             
-                <nav menuIsOpen class="main-nav nav-is-open">
-
-            
+            <div class="menu-container" v-bind:class="{ 'menu-is-open': menuIsOpen }">
+            <nav>           
             <ul class="nav-ul">
-            <li class="nav-item primary p1">
+            <li class="nav-item primary p1 expandable">
                 <a class="nav-text primary-text" href="#">News</a>
                 <ul class="nav-ul">
                     <li class="nav-item secondary">
@@ -42,7 +41,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item primary p2">
+            <li class="nav-item primary p2 expandable">
                 <a class="nav-text primary-text" href="#">Arts & Life</a>
                 <ul class="nav-ul">
                     <li class="nav-item secondary">
@@ -71,7 +70,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item primary p3">
+            <li class="nav-item primary p3 expandable">
                 <a class="nav-text primary-text" href="#">Music & Podcasts</a>
                 <ul class="nav-ul">
                     <li class="nav-item secondary">
@@ -93,6 +92,7 @@
             </li>
         </ul>
     </nav>
+</div>
 
 
     
@@ -102,6 +102,51 @@
     </div>
             
         </header>
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script>
+            new Vue({
+              el: '#news-site-header',
+              data: {
+                menuIsOpen: false
+              },
+              methods: {
+                toggleTheHamburgerMenu: function() {
+                  this.menuIsOpen = !this.menuIsOpen
+                }
+              }
+            })
+          </script>
+
+<script>
+      
+    var expandables = document.getElementsByClassName('expandable');
+    
+    for (let expandable of expandables) {
+      let triggerElement = expandable.querySelector('a');
+      triggerElement.addEventListener('click', function(event) {
+        event.preventDefault();
+        closeAllExcept(expandable);
+        expandable.classList.toggle('expanded');
+      })
+    }
+
+    function closeAllExcept(clickedExpandable) {
+      for (let expandable of expandables) {
+        if (expandable !== clickedExpandable) {
+          expandable.classList.remove('expanded')
+        }
+      }
+    }
+
+  </script>
     </body>
 </html>
 
