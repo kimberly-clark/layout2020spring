@@ -1,0 +1,102 @@
+body{
+    margin: 0;}
+
+/*fonts*/
+@font-face {
+    font-family: 'Avenir LT Std';
+    src: url('fonts/AvenirLTStd-Book.woff2') format('woff2'),
+        url('fonts/AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+/*masthead flex bar*/
+.masthead{
+    width: 100%;
+    display: flex;
+    flex-direction: row;}
+.masthead-left{
+    flex-grow: 1;
+    padding: 40px 0 0 4%;}
+.masthead-center{
+    flex-grow: 3;
+    text-align: center;}
+.masthead-right{
+    flex-grow: 1;
+    text-align: right;
+    padding: 40px 4% 0 0;}
+.menu-image{
+    height: 40px;}
+.menu-image-button{
+    border: none;
+    background-color: #80b6bc;}
+.account-image{
+    height: 40px;} 
+/*NEWS TIME font*/
+.news-time{
+    font-family: blenny, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 65px;
+    padding: 0;
+    margin: 0;
+    height: 80px;}
+.tagline{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    font-size: 35px;}
+
+/*main menu*/
+.nav-ul{
+    padding-left: 0;}
+.nav-item{
+    list-style: none;}
+.p1{
+    background-color: black;}
+.p2{
+    background-color: #ea3323;}
+.p3{
+    background-color: #80b6bc;}
+.p4{
+    background-color: #808080;}
+.primary{
+    padding: 10px 0;}
+.nav-text{
+    text-decoration:none;
+    font-size: 35px;
+    color: white;}
+.primary-text{
+    padding-left: 10%;
+    font-size: 50px;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;}
+.secondary-text{
+    font-family: 'Avenir LT Std';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    padding-left: 20%;}
+.menu-container{
+    Visibility: hidden;
+    Opacity: 0;
+    Transition: opacity, 0.3s, visibility 0.3s, transform 0.3s;
+    /*Transform: translatetrX(20px);*/
+    position: relative;
+    top: -16px;}
+.menu-container.menu-is-open{
+    Opacity: 1;
+    Visibility: visible;
+    /*Transform: translateX(0);*/
+    position: relative;
+    top: -16px;}
+.expandable > ul{
+        display: none;}
+.expandable.expanded > ul{
+        display: block;}
+.masthead{
+    background-color: #80b6bc;
+    padding-bottom: 10px;
+    /*box-shadow: 0 15px 10px -10px #808080;*/
+}
