@@ -1,1 +1,271 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="header-style.css">
+        <link rel="stylesheet" type="text/css" href="main-style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/yde1ngx.css">
+    </head>
+    <body>
+        <header id="news-site-header">
+            <div class="masthead"><!--Title and tagline-->
+                <div class="masthead-left">
+                    <button class="menu-image-button" v-on:click="toggleTheMainMenu()"><img class="menu-image" src="menu.png"></button>
+                </div>
+                <div class="masthead-center">
+                    <h1 class="news-time website-title">News Time</h1>
+                    <h2 class="tagline webisite-title">Catch Up</h2>
+                </div>
+                <div class="masthead-right">
+                    <a class="large-masthead-only large-masthead-text lm1" href="#">News</a>
+                    <a class="large-masthead-only large-masthead-text lm2" href="#">Arts & Life</a>
+                    <a class="large-masthead-only large-masthead-text lm3" href="#">Music & Podcasts</a>
+                    <button class="account-image-button" v-on:click="toggleTheAccountMenu()"><img class="account-image" src="account-white.png"></button>
+                    <a class="large-masthead-only" href="#"><img class="search-image" src="search.png"></a>
+                </div>
+
+            </div>
+            
+            
+            
+            <div class="menu-container" v-bind:class="{ 'menu-is-open': mainMenuIsOpen }">
+                
+                <nav>           
+            <ul class="top-nav-ul nav-ul">
+            <li class="nav-item primary p1 expandable">
+                <a class="nav-text primary-text" href="#">News</a>
+                <ul class="nav-ul">
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">U.S.</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Politics</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">World</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item primary p2 expandable">
+                <a class="nav-text primary-text" href="#">Arts & Life</a>
+                <ul class="nav-ul">
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Tech</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Pop Culture</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Movies</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Television</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Books</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Food</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Art & Design</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Performing Arts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item primary p3 expandable">
+                <a class="nav-text primary-text" href="#">Music & Podcasts</a>
+                <ul class="nav-ul">
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Music News</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">New Music</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Daily Podcasts</a>
+                    </li>
+                    <li class="nav-item secondary">
+                        <a class="nav-text secondary-text" href="#">Featured Podcasts</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item primary p4">
+                <a class="nav-text primary-text" href="#"><img class="search-image-bottom" src="search.png">Search</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- <div class="black-box"></div> -->
+</div>
+
+
+<div class="account-options-container" v-bind:class="{ 'menu-is-open': accountMenuIsOpen }">
+    <ul>
+        <li class="nav-item account-nav log-in">
+            <a class="account-text nav-text" href="#">Log In</a>
+        </li>
+        <li class="nav-item account-nav create-account">
+            <a class="account-text nav-text" href="#">Create an Account</a>
+        </li>
+    </ul>
+</div>
+
+    </div>
+            
+        </header>
+
+
+
+
+  <!-- Main Story -->
+<div class="main-website" id="news-template" v-cloak>
+  <section class="title-section">
+    <!-- Safe area with titles -->
+     
+      <h1 class="title left">{{ story.title }}</h1>
+     <h2 class="subtitle left">{{ story.subtitle }}</h2>
+     <h2 class="story-tags"><span v-for="tag in story.tags">{{ tag }}</span></h2>
+    
+     <!-- Image -->
+     <figure><img class="title-picture" v-bind:src="story.image.url">
+     <h3><figcaption class="title-picture-caption">{{ story.image.caption }}</figcaption></h3>
+     </figure>
+
+     <div class="source-and-date">
+     <h2 class="center">By <a v-bind:href="story.source.url" class="story-source">{{ story.source.name }}</a>{{ story.date }}</h2>
+   </div>
+
+  
+ </section>  
+
+ <section class="popular">
+ <h2 class="most-popular-stories">MOST POPULAR STORIES</h2>
+ <ul class="popular-story-container">
+    <li v-for="relatedStory in relatedStories" class="popular-story-list-object">
+      <div v-on:click="load(relatedStory)" class="popular-story-div">
+        <h2 class="popular-story-title">{{ relatedStory.title }}</h2>
+      </div>
+    </li>
+  </ul>
+</section>
+
+   
+   <!--Section, main story-->
+   <section class="left main-story">
+
+   <p class="drop-cap story-content"><span v-html="story.teaser" class="story-teaser"></span></p>
+   <p class="story-content"><span v-html="story.content" ></span></pclass="story-content">
+
+    <div class="end-branding">
+     <h2 class="end-contact">Contact <a v-bind:href="story.source.url" class="story-source">{{ story.source.name }}</a></h2>
+     <h1 class="news-time website-title">News Time</h1>
+     <img class="circles" src="social-media.png">
+  </div>
+   
+ </section>
+
+
+   <!-- Related Stories, footer-->
+   <section class="end-story-section">
+   <h1 class="read-more">Catch Up On...</h1>
+   <ul class="related-story-container">
+     <li v-for="relatedStory in relatedStories" class="related-story-list-object">
+       <div v-on:click="load(relatedStory)" class="related-story-div">
+         <img class="related-story-image" v-bind:src="relatedStory.image.url">
+         <h2 class="related-story-title">{{ relatedStory.title }}</h2>
+       </div>
+     </li>
+   </ul>
+   <!--<a class="all-related-stories" href="#">See All Related Stories..</a>-->
+   </section>
+   
+   <!-- footer should have social nav, copyright, and buisness nav (contact us, careers)-->
+ <footer>
+   <ul class="footer-list">
+    <li class="footer-item">
+        <a class="footer-nav-text" href="#">Privacy Policy</a>
+    </li>
+    <li class="footer-item">
+        <a class="footer-nav-text" href="#">Terms of Use</a>
+    </li>
+    <li class="footer-item">
+        <a class="footer-nav-text" href="#">About US</a>
+    </li>
+    <li class="footer-item">
+        <a class="footer-nav-text" href="#">Careers</a>
+    </li>
+    <li class="footer-item">
+        <a class="footer-nav-text" href="#">Contact</a>
+    </li>
+   </ul>
+
+   <h4 class="copyright-text"> Website created by Kimberly Clark. The website is a project for academic purposes. All content is provided by NewsAPI.org, and belongs to their respective owners.</h4>
+ </footer>
+    
+
+    
+   <!-- Useful debugging info, you can comment this section out when you don't need it. -->
+   <!--
+   <pre>The story object: {{ story | json }}</pre>
+   <pre>The relatedStories array: {{ relatedStories | json }}</pre>
+   -->
+
+
+ </div>
+
+ <!-- Scripts here are what load the Vue library, and the actual story content. -->
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="https://abesiemsen.github.io/layout2020spring-resources/projects/news-story-template/data.js"></script>
+
+ <script>
+    new Vue({
+      el: '#news-site-header',
+      data: {
+        mainMenuIsOpen: false,
+        accountMenuIsOpen: false
+      },
+      methods: {
+        toggleTheMainMenu: function() {
+          this.mainMenuIsOpen = !this.mainMenuIsOpen
+          this.accountMenuIsOpen = false
+        },
+        toggleTheAccountMenu: function(){
+            this.accountMenuIsOpen = !this.accountMenuIsOpen
+            this.mainMenuIsOpen = false;
+        }
+      }
+    })
+  </script>
+
+<script>
+
+var expandables = document.getElementsByClassName('expandable');
+
+for (let expandable of expandables) {
+let triggerElement = expandable.querySelector('a');
+triggerElement.addEventListener('click', function(event) {
+event.preventDefault();
+closeAllExcept(expandable);
+expandable.classList.toggle('expanded');
+})
+}
+
+function closeAllExcept(clickedExpandable) {
+for (let expandable of expandables) {
+if (expandable !== clickedExpandable) {
+  expandable.classList.remove('expanded')
+}
+}
+}
+
+</script>
+
+</body>
+</html>
+        
+
 
