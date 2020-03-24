@@ -131,7 +131,7 @@
      <h2 class="story-tags"><span v-for="tag in story.tags">{{ tag }}</span></h2>
     
      <!-- Image -->
-     <figure><img class="title-picture" v-bind:src="story.image.url">
+     <figure class="left"><img class="title-picture" v-bind:src="story.image.url">
      <h3><figcaption class="title-picture-caption">{{ story.image.caption }}</figcaption></h3>
      </figure>
 
@@ -171,7 +171,7 @@
 
    <!-- Related Stories, footer-->
    <section class="end-story-section">
-   <h1 class="read-more">Catch Up On...</h1>
+   <h1 class="read-more footer-text">Catch Up On...</h1>
    <ul class="related-story-container">
      <li v-for="relatedStory in relatedStories" class="related-story-list-object">
        <div v-on:click="load(relatedStory)" class="related-story-div">
@@ -180,6 +180,7 @@
        </div>
      </li>
    </ul>
+   <h1 class="more-stories footer-text">More Stories...</h1>
    <!--<a class="all-related-stories" href="#">See All Related Stories..</a>-->
    </section>
    

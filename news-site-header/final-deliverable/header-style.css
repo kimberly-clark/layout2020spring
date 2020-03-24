@@ -129,7 +129,7 @@ body{
 
 @media (min-width: 900px){
     nav{
-        width: 30%;
+        width: 100%;
     }
 }
 .nav-item{
@@ -149,7 +149,7 @@ body{
     font-size: 23px;
     color: white;}
 .primary-text{
-    padding-left: 10%;
+    padding-left: 50px;
     font-family: acumin-pro, sans-serif;
     font-weight: 700;
     font-style: normal;}
@@ -159,7 +159,7 @@ body{
     font-family: 'Avenir LT Std';
     font-weight: normal;
     font-style: normal;
-    padding-left: 20%;}
+    padding-left: 75px;}
 
 
 .menu-container{
@@ -238,7 +238,9 @@ body{
 }*/
 
 
-
+.account-options-container{
+    z-index: 10;
+}
 
 .account-text{
     font-family: 'Avenir LT Std';
