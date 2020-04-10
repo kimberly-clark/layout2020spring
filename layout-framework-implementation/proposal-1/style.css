@@ -1,0 +1,29 @@
+.main-website{
+    margin-top: 20px;
+}
+
+/**.my-container-padding{
+    margin: 0;
+}**/
+
+.my-container{
+    /**border: 5px solid green;
+    margin: 0;
+    width: 100%;
+    padding: 0;**/
+}
+
+.my-row{
+    /*border: 1px solid black;*/
+    height: 600px;
+}
+
+.my-col{
+    border: 1px dotted black;
+    padding: 30px;
+}
+
+.running-picture{
+    height: 100%;
+    background-size: cover;
+}
