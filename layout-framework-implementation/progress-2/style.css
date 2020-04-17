@@ -1,0 +1,161 @@
+.navbar-brand{
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nav-item{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+}
+
+.main-website{
+    margin-top: 20px;
+}
+
+.my-col{
+    padding: 0;
+}
+
+.title-container{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+h1{
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #343a31;
+}
+
+h2{
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #343a31;
+}
+
+.our-mission{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    color: #343a31;
+}
+
+.mission{
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #343a31;
+}
+
+
+
+.home-page-image-container{
+    background-size: cover;
+}
+
+
+.team-picture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.upcoming-event-container{
+    /*background-color: rgb(48, 48, 48);*/
+    color: white;
+    height: 625px;
+    padding-top: 40px;
+}
+
+.upcoming-event-name{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.upcoming-event-date{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.mission-container{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.join-the-movement-container{
+    color: white;
+    padding: 30px;
+}
+
+.join-the-movement-text{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.get-involved-column{
+    padding:0;
+}
+
+.get-involved-image{
+    width: 100%;
+    display: block;
+}
+
+
+.get-involved-text{
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #343a31;
+    text-decoration: none;
+    position: relative;
+}
+
+.footer{
+    color: white;
+}
+
+.footer h2{
+    color: white;
+}
+
+
+
+
+
+
+/*ABOUT PAGE*/
+p{
+    font-size: 22px;
+}
+
+.about-values-list-object{
+    display: inline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/*SPORTS PAGE*/
+.sports-list{
+    list-style: none;
+}
